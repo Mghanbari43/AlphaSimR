@@ -790,6 +790,7 @@ pedigreeCross = function(founderPop, id, mother, father, matchID=FALSE,
   founderNames = c(unique(id[isFounder]),
                    unique(mother[motherIsFounder]),
                    unique(father[fatherIsFounder]))
+  founderNames = founderNames[!founderNames=="0"]
   nFounder = length(founderNames)
   if(matchID){
     # Check that all founders are present
